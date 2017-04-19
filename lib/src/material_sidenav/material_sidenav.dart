@@ -57,15 +57,11 @@ class MaterialSidenavComponent {
             ]
         },
     ];
-    bool _isOpened = false;
+    bool isOpened = false;
 
     toggleToolbar() {
-        _isOpened = !_isOpened ;
+        isOpened = !isOpened ;
     }
 
     get menuElements => _menuElements;
-    get isOpened => _isOpened;
-    set isOpened(val) {
-        _isOpened = val;
-    }
 }

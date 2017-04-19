@@ -4,9 +4,14 @@
                 0 3px 3px -2px rgba(0,0,0,.2),
                 0 1px 8px 0 rgba(0,0,0,.12);
 }
+@mixin ease() {
+    transition-timing-function: cubic-bezier(0.4, 0.0, 0.2, 1);
+    transition-duration: .18s;
+}
 
 //colors
 $color-google-blue: rgb(59, 120, 231);
+$color-sidenav-gray: rgb(250, 250, 250);
 
 //sizes
 $toolbar-height: 48px;
@@ -35,11 +40,11 @@ $nav-element-height: 36px;
         margin-left: 24px;
         border-radius: 50%;
         background-color: $color-google-blue;
-        transition-duration: .8s;
+        @include ease();
 
         &:hover {
             background-color: lighten($color-google-blue, 5%);
-            transition-duration: .3s;
+            @include ease();
         }
     }
 }
@@ -51,24 +56,36 @@ $nav-element-height: 36px;
     top: $toolbar-height;
     bottom: 0;
     left: -$sidenav-width;
-    background-color: #fff;
+    background-color: $color-sidenav-gray;
     overflow: hidden;
-    transition: .8s;
+    @include ease();
 
     &.sidebar--is-opened {
         left: 0;
-        transition: .3s;
+        @include ease();
     }
 }
 
 .navigation {
-    width: $sidenav-width - 12px;
+    width: 100%;
     padding: 24px 0;
 
     &__container {
         height: 100%;
         overflow-x: hidden;
-        overflow-y: scroll;
+        overflow-y: hidden;
+
+        &::-webkit-scrollbar {
+            width: 0;
+            opacity: 0;
+        }
+        &:hover {
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                width: 8px;
+            }
+        }
     }
 
     &__title {
