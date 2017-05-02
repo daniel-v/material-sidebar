@@ -1,0 +1,8 @@
+<mm-toolbar-item [icon]="icon" class="content">
+    <ng-content></ng-content>
+</mm-toolbar-item>
+
+<material-ripple (mousedown)="onMouseDown($event)"
+                 (mouseup)="onMouseUp($event)"
+                 [focused]="visualFocus">
+</material-ripple>

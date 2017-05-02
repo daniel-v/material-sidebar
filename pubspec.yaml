@@ -1,5 +1,6 @@
 name: material_sidenav
-description: A simple AngularDart app
+description: >
+  Sidenav, nav item and toolbar components with material design inspiration
 version: 0.0.1
 
 environment:
@@ -7,6 +8,7 @@ environment:
 
 dependencies:
   angular2: ^2.2.0
+  angular2_components: 0.2.2
 
 dev_dependencies:
   browser: ^0.10.0
