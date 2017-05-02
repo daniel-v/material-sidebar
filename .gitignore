@@ -15,3 +15,4 @@ pubspec.lock
 doc/api/
 
 .sass-cache
+.idea
