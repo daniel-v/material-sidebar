@@ -1,0 +1,26 @@
+:host {
+  background-color: #fafafa;
+  border-right: 1.1px solid #d3d3d3;
+  display: block;
+  width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: .18s; }
+  :host aside {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box; }
+  :host::-webkit-scrollbar {
+    width: 0;
+    opacity: 0; }
+  :host:hover {
+    overflow-y: auto; }
+    :host:hover::-webkit-scrollbar {
+      width: 8px; }
+  :host.opened {
+    width: 224px;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: .18s; }

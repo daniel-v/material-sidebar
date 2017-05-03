@@ -10,6 +10,7 @@ $nav-element-height: 36px;
   color: rgba(0,0,0,.654);
   flex-grow: 1;
   transition: color 0.4s linear;
+  flex-basis: 100%;
   .item-icon {
     width: 64px;
     justify-content: center;

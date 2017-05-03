@@ -17,16 +17,16 @@ import '../../util/attributes.dart' as attrib;
 ///
 /// - `textOnly` -- If present, `icon` will be ignored and it's place removed
 @Component(
-    selector: 'mm-toolbar-item',
-    templateUrl: 'toolbar_item.html',
-    styleUrls: const ['toolbar_item.css'],
+    selector: 'mm-sidebar-item',
+    templateUrl: 'sidebar_item.html',
+    styleUrls: const ['sidebar_item.css'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     inputs: const ['icon', 'textOnly'],
     directives: const [GlyphComponent],
     host: const {
       '[attr.textOnly]': 'textOnly',
     })
-class MMToolbarItemComponent extends Object with TextOnlyMixin {
+class MMSidebarItemComponent extends Object with TextOnlyMixin {
   String icon;
 }
 

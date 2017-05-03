@@ -1,13 +1,12 @@
-import 'dart:html';
 import 'package:angular2/core.dart';
 
-import '../toolbar_item/toolbar_item.dart';
+import '../sidebar_item/sidebar_item.dart';
 import 'package:angular2_components/src/components/button_decorator/button_decorator.dart';
 import 'package:angular2_components/src/components/material_button/material_button.dart';
 import 'package:angular2_components/src/components/material_button/material_button_base.dart';
 import 'package:angular2_components/src/components/material_ripple/material_ripple.dart';
 
-/// Component compositing [MMToolbarItemComponent] and [MaterialButtonBase]
+/// Component compositing [MMSidebarItemComponent] and [MaterialButtonBase]
 ///
 /// A Toolbar item that is also a button. Only a small subset of Material
 /// Buttons features are exposed.
@@ -35,10 +34,10 @@ import 'package:angular2_components/src/components/material_ripple/material_ripp
     templateUrl: 'nav_item.html',
     styleUrls: const ['nav_item.css'],
     directives: const [
-      MMToolbarItemComponent,
+      MMSidebarItemComponent,
       MaterialRippleComponent,
     ],
-    inputs: const ['link', 'icon', 'disabled', 'textOnly'],
+    inputs: const ['link', 'icon', 'disabled', 'textOnly', 'fullWidth'],
     outputs: const ['trigger'],
     changeDetection: ChangeDetectionStrategy.OnPush,
     providers: const [
@@ -49,6 +48,7 @@ import 'package:angular2_components/src/components/material_ripple/material_ripp
       '[class.is-disabled]': 'disabled',
       '[attr.aria-disabled]': 'disabledStr',
       '[attr.textOnly]': 'textOnly',
+      '[attr.fullWidth]': 'fullWidth',
       '(mousedown)': r'onMouseDown($event)',
       '(mouseup)': r'onMouseUp($event)',
       '(mouseenter)': r'onMouseEnter()',
@@ -68,6 +68,8 @@ class MMNavItemComponent extends MaterialButtonBase with TextOnlyMixin {
   String icon;
 
   bool hovering = false;
+
+  var fullWidth;
 
   final ChangeDetectorRef _changeDetector;
 

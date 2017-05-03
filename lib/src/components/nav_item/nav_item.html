@@ -1,9 +1,9 @@
-<mm-toolbar-item [icon]="icon"
+<mm-sidebar-item [icon]="icon"
                  class="content"
                  [textOnly]="textOnly"
                  [class.hovering]="hovering">
     <ng-content></ng-content>
-</mm-toolbar-item>
+</mm-sidebar-item>
 
 <material-ripple (mousedown)="onMouseDown($event)"
                  (mouseup)="onMouseUp($event)"

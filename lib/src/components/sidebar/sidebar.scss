@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+
+:host {
+  background-color: $color-sidenav-gray;
+  border-right: 1.1px solid #d3d3d3;
+  display: block;
+  width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  aside {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  &::-webkit-scrollbar {
+    width: 0;
+    opacity: 0;
+  }
+  &:hover {
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 8px;
+    }
+  }
+  &.opened {
+    width: $sidenav-width;
+    @include ease();
+  }
+  @include ease();
+}
