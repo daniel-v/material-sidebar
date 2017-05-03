@@ -1,6 +1,6 @@
 import 'package:angular2/core.dart';
-import 'package:angular2_components/src/components/glyph/glyph.dart';
 import '../../util/attributes.dart' as attrib;
+import 'package:angular_components/src/components/glyph/glyph.dart';
 
 /// Toolbar Item
 ///

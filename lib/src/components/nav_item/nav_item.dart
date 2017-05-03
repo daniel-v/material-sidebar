@@ -1,10 +1,10 @@
 import 'package:angular2/core.dart';
 
 import '../sidebar_item/sidebar_item.dart';
-import 'package:angular2_components/src/components/button_decorator/button_decorator.dart';
-import 'package:angular2_components/src/components/material_button/material_button.dart';
-import 'package:angular2_components/src/components/material_button/material_button_base.dart';
-import 'package:angular2_components/src/components/material_ripple/material_ripple.dart';
+import 'package:angular_components/src/components/button_decorator/button_decorator.dart';
+import 'package:angular_components/src/components/material_button/material_button.dart';
+import 'package:angular_components/src/components/material_button/material_button_base.dart';
+import 'package:angular_components/src/components/material_ripple/material_ripple.dart';
 
 /// Component compositing [MMSidebarItemComponent] and [MaterialButtonBase]
 ///

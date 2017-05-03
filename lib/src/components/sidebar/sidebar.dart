@@ -1,5 +1,5 @@
 import 'package:angular2/core.dart';
-import 'package:angular2_components/src/model/ui/toggle.dart';
+import 'package:angular_components/src/model/ui/toggle.dart';
 
 @Component(
     selector: 'mm-sidebar',

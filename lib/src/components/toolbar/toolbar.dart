@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:html';
 import 'package:angular2/core.dart';
 
-import 'package:angular2_components/src/components/glyph/glyph.dart';
-import 'package:angular2_components/src/components/material_button/material_button.dart';
+import 'package:angular_components/src/components/glyph/glyph.dart';
+import 'package:angular_components/src/components/material_button/material_button.dart';
 
 /// Toolbar
 ///
