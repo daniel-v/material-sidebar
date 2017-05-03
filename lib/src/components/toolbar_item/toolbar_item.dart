@@ -25,8 +25,7 @@ import '../../util/attributes.dart' as attrib;
     directives: const [GlyphComponent],
     host: const {
       '[attr.textOnly]': 'textOnly',
-    }
-)
+    })
 class MMToolbarItemComponent extends Object with TextOnlyMixin {
   String icon;
 }

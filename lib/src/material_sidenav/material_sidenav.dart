@@ -6,14 +6,14 @@ import '../components/toolbar_item/toolbar_item.dart';
 @Component(
     selector: 'material-sidenav',
     templateUrl: 'material_sidenav.html',
-    styleUrls: const ['material_sidenav.css'],
+    styleUrls: const [
+      'material_sidenav.css'
+    ],
     directives: const [
       MMNavItemComponent,
       MMToolbarItemComponent,
-    ]
-)
+    ])
 class MaterialSidenavComponent {
-
   bool isOpened = true;
 
   toggleToolbar() {
@@ -22,10 +22,8 @@ class MaterialSidenavComponent {
 
   get menuElements => _menuElements;
 
-  void printHello() {
-  }
+  void printHello() {}
 }
-
 
 final List<Map<String, dynamic>> _menuElements = [
   {

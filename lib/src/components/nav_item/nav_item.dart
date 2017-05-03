@@ -41,7 +41,9 @@ import 'package:angular2_components/src/components/material_ripple/material_ripp
     inputs: const ['link', 'icon', 'disabled', 'textOnly'],
     outputs: const ['trigger'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    providers: const [const Provider(ButtonDirective, useExisting: MMNavItemComponent)],
+    providers: const [
+      const Provider(ButtonDirective, useExisting: MMNavItemComponent)
+    ],
     preserveWhitespace: false,
     host: const {
       '[class.is-disabled]': 'disabled',
@@ -57,8 +59,7 @@ import 'package:angular2_components/src/components/material_ripple/material_ripp
       '(blur)': r'onBlur($event)',
       'role': 'button',
       'animated': 'true',
-    }
-)
+    })
 class MMNavItemComponent extends MaterialButtonBase with TextOnlyMixin {
   /// Link to navigate to
   String link;
@@ -84,5 +85,4 @@ class MMNavItemComponent extends MaterialButtonBase with TextOnlyMixin {
   void onMouseOut() {
     hovering = false;
   }
-
 }
