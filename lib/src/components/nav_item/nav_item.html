@@ -1,4 +1,7 @@
-<mm-toolbar-item [icon]="icon" class="content">
+<mm-toolbar-item [icon]="icon"
+                 class="content"
+                 [textOnly]="textOnly"
+                 [class.hovering]="hovering">
     <ng-content></ng-content>
 </mm-toolbar-item>
 

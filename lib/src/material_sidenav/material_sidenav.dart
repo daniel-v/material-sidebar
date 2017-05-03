@@ -14,13 +14,16 @@ import '../components/toolbar_item/toolbar_item.dart';
 )
 class MaterialSidenavComponent {
 
-  bool isOpened = false;
+  bool isOpened = true;
 
   toggleToolbar() {
     isOpened = !isOpened;
   }
 
   get menuElements => _menuElements;
+
+  void printHello() {
+  }
 }
 
 

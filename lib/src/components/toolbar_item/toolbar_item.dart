@@ -27,11 +27,11 @@ import '../../util/attributes.dart' as attrib;
       '[attr.textOnly]': 'textOnly',
     }
 )
-class MMToolbarItemComponent  {
-
+class MMToolbarItemComponent extends Object with TextOnlyMixin {
   String icon;
+}
 
+abstract class TextOnlyMixin {
   var textOnly;
-
   bool get isTextOnly => attrib.isPresent(textOnly);
 }
